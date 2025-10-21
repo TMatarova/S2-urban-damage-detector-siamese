@@ -72,9 +72,9 @@ Artifacts:
 * `results/metrics.json` with full metrics
 
 ---
-**Structure**
+**Structure of model**
 
-<img width="391" height="511" alt="Untitled Diagram drawio (18)" src="https://github.com/user-attachments/assets/c131d09e-cdca-42e1-a9ef-4b9db13c9641" />
+                           <img width="391" height="511" alt="Untitled Diagram drawio (18)" src="https://github.com/user-attachments/assets/c131d09e-cdca-42e1-a9ef-4b9db13c9641" />
 
 ---
 ## Quick start
