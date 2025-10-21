@@ -33,7 +33,7 @@ Siamese CNN needs two images so these were before and after:
 ## Model
 
 **Architecture**: Siamese CNN with a **ResNet-101** backbone per branch.
-**Feature merge**:
+**Feature combined formula**:
 
 [f_before, f_after, |f_before − f_after|, f_before ⊙ f_after] → 8192-D
 
