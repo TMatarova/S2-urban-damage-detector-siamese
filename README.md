@@ -12,7 +12,6 @@ Siamese CNN needs two images so these were before and after:
 
 **Regions included**
 
-| 1           | 2          | 3         | 4        | 5                   |
 | ----------- | ---------- | --------- | -------- | ------------------- |
 | Vorzel      | Mykolaiv   | Okhtyrka  | Schastia | Sumy                |
 | Trostianets | Volnovakha | Kharkiv   | Kherson  | Kramatorsk          |
