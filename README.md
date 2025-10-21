@@ -21,6 +21,7 @@ Siamese CNN needs two images so these were before and after:
 | Rubizhne    | Kremenchuk |           |          |                     |
 
 This repo only includes the final preprocessed and split dataset, as the individual images were preprocessed using GDAL library but are too large to upload individually.
+Before and after images were built using 4 bands (RGB + NIR), then the UNOSAT labels were used to create binary masks of damage or no damage and these were then preprocessed.
 
 ---
 
