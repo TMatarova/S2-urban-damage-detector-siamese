@@ -21,6 +21,7 @@ Siamese CNN needs two images so these were before and after:
 | Rubizhne    | Kremenchuk |           |          |                     |
 
 This github only includes the final split dataset as the individual images were preprocessed using GDAL library but are too large to upload individually.
+
 ---
 
 ## Why this model is strong for **damage detection**
