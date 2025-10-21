@@ -1,0 +1,13 @@
+{
+    "Model": "Siamese CNN (ResNet-101)",
+    "Patch Size": "16x16 (160m x 160m)",
+    "AUC-ROC": 0.8909,
+    "Average Precision": 0.8594,
+    "Accuracy": 0.826,
+    "Damage Precision": 0.7734,
+    "Damage Recall": 0.9223,
+    "Damage F1": 0.8413,
+    "No-Damage Precision": 0.9038,
+    "No-Damage Recall": 0.7297,
+    "No-Damage F1": 0.8075
+}
