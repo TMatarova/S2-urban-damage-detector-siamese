@@ -3,9 +3,10 @@
 ---
 
 ## Dataset
-Dataset built from **Sentinel-2 image pairs** focus on building damage across **22** regions in Ukraine, downloaded via the [Copernicus Browser](https://browser.dataspace.copernicus.eu/?zoom=5&lat=50.16282&lng=20.78613&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE).
+Dataset built from **Sentinel-2 image pairs** focused on building damage across **22** regions in Ukraine, downloaded via the [Copernicus Browser](https://browser.dataspace.copernicus.eu/?zoom=5&lat=50.16282&lng=20.78613&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE).
 Sentinel-2 provides ~10 m per pixel for these bands, so a 16×16 patch covers 160 m × 160 m (25,600 m² ≈ 0.0256 km²).
 
+Siamese CNN needs two images so these were before and after:
 * **Date rule:** *Before* = any date in **2021** · *After* = any date **on/after 2022-03-01**
 * **Labels:** Derived from [UNITAR-UNOSAT](https://unosat.org/products) damage assessment shapefiles (first-instance), aligned to the before/after image pairs
 
