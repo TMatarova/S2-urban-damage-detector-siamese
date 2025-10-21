@@ -1,7 +1,10 @@
 # A patch-level Siamese CNN trained on Sentinel-2 RGB+NIR imagery from Ukraine to detect urban damage with a ResNet-101 backbone.
 Sentinel-2 provides ~10 m per pixel for these bands, so a 16×16 patch covers 160 m × 160 m (25,600 m² ≈ 0.0256 km²).
 
-**Sentinel-2 image pairs** focus on building damage across **22** regions in Ukraine, downloaded via the [Copernicus Browser](https://browser.dataspace.copernicus.eu/?zoom=5&lat=50.16282&lng=20.78613&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE).
+---
+
+## Dataset
+Dataset built from **Sentinel-2 image pairs** focus on building damage across **22** regions in Ukraine, downloaded via the [Copernicus Browser](https://browser.dataspace.copernicus.eu/?zoom=5&lat=50.16282&lng=20.78613&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE).
 
 * **Date rule:** *Before* = any date in **2021** · *After* = any date **on/after 2022-03-01**
 * **Labels:** Derived from [UNITAR-UNOSAT](https://unosat.org/products) damage assessment shapefiles (first-instance), aligned to the before/after image pairs
@@ -15,11 +18,6 @@ Sentinel-2 provides ~10 m per pixel for these bands, so a 16×16 patch covers 16
 | Lysychansk  | Makariv    | Melitopol | Avdiivka | Azovstal industrial |
 | Bucha       | Chernihiv  | Hostomel  | Irpin    | Antonivka           |
 | Rubizhne    | Kremenchuk |           |          |                     |
-
-# Patch-level Sentinel-2 urban damage detection (Siamese CNN · ResNet-101)
-
-A Siamese CNN trained on Sentinel-2 RGB+NIR imagery from Ukraine to **detect urban damage** at patch level.
-Sentinel-2 RGB+NIR bands have ~10 m GSD per pixel, so a **16×16** patch covers **160 m × 160 m** (**25,600 m² ≈ 0.0256 km²**).
 
 ---
 
@@ -96,9 +94,4 @@ python main.py train \
 * Patch-level signals that can be aggregated to tiles or AOIs for dashboards and field planning
 * Decision support for humanitarian partners, not a final damage authority
 
----
 
-## Notes
-
-* Patch size is **16×16**. If you switch to **64×64**, update the coverage to **640 m × 640 m** (**0.4096 km²**).
-* Use Git LFS for large files like `*.npz`, `*.pt`, and any GeoTIFFs.
