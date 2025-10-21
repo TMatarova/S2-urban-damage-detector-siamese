@@ -34,9 +34,8 @@ Siamese CNN needs two images so these were before and after:
 
 **Architecture**: Siamese CNN with a **ResNet-101** backbone per branch.
 **Feature merge**:
-[
-[f_{\text{before}},\ f_{\text{after}},\ |f_{\text{before}}-f_{\text{after}}|,\ f_{\text{before}}\odot f_{\text{after}}] \rightarrow \text{8192-D}
-]
+
+[f_before, f_after, |f_before − f_after|, f_before ⊙ f_after] → 8192-D
 
 **MLP head**
 
@@ -73,7 +72,11 @@ Artifacts:
 * `results/metrics.json` with full metrics
 
 ---
+**Structure**
 
+<img width="391" height="511" alt="Untitled Diagram drawio (18)" src="https://github.com/user-attachments/assets/c131d09e-cdca-42e1-a9ef-4b9db13c9641" />
+
+---
 ## Quick start
 
 ```bash
