@@ -47,51 +47,6 @@ self.head = nn.Sequential(
     nn.Linear(8192, 256), nn.BatchNorm1d(256), nn.GELU(), nn.Dropout(0.5),
     nn.Linear(256, 1),
 )
-```
-
----
-
-## Results (patch level)
-
-**Test accuracy**: **0.826** (~0.83)
-
-**Confusion matrix** (rows = true, cols = predicted)
-
-|               | No-Damage | Damage |
-| ------------- | --------- | ------ |
-| **No-Damage** | 216       | 80     |
-| **Damage**    | 23        | 273    |
-
-**Classification report**
-
-* No-Damage — precision **0.90**, recall **0.73**, F1 **0.81** (n=296)
-* Damage — precision **0.77**, recall **0.92**, F1 **0.84** (n=296)
-* Overall — accuracy **0.83**, macro F1 **0.82** (n=592)
-
-Artifacts:
-
-* `results/confusion_matrix_counts.png`
-* `results/confusion_matrix_normalized.png`
-* `results/metrics.json` with full metrics
-
----
-**Structure of model**
-
-<img width="391" height="511" alt="Untitled Diagram drawio (18)" src="https://github.com/user-attachments/assets/c131d09e-cdca-42e1-a9ef-4b9db13c9641" />
-
----
-## Quick start
-
-```bash
-# Train + evaluate on a balanced NPZ of pairs
-python main.py train \
-  --npz data/processed/FinalBalanced_splits.npz \
-  --out results \
-  --ckpt models/best_resnet101.pt
-```
-
-**Input format**: NPZ with `x_before`, `x_after` shaped `(N, 4, 16, 16)` and labels `y` in `{0,1}`
-**Output**: 1-logit per pair (use sigmoid at inference)
 
 ---
 
